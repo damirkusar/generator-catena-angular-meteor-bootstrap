@@ -12,18 +12,15 @@ module.exports = {
       .waitForElementVisible("body", 1000)
       .setValue('#usernameInput','admin')
       .setValue('#passwordInput','admin')
-      // .click('#signIn')
+      .click('#signIn')
       // .submitForm('form')
-      .keys(['\uE006'], function(){
-        console.log("press enter")
-      })
+      // .keys(['\uE006'], function(){
+      //   console.log("press enter")
+      // })
       .pause(1000)
       .url("http://127.0.0.1:3000/changepw")
-      .waitForElementVisible("body", 1000)
-      .waitForElementVisible("form", 1000)
-      .waitForElementVisible('input[type="password"]', 1000)
-      .waitForElementVisible('form > button', 1000)
-      .verify.containsText('form > button', 'CHANGE PASSWORD')
+      .waitForElementVisible('form > div> button', 1000)
+      .verify.containsText('form > div > button', 'change password')
       .end();
   },
   "Forgot Password view correct" : function (client) {
@@ -31,9 +28,8 @@ module.exports = {
       .url("http://127.0.0.1:3000/forgotpw")
       .waitForElementVisible("body", 1000)
       .waitForElementVisible("form", 1000)
-      .waitForElementVisible('input[type="email"]', 1000)
-      .waitForElementVisible('form > button', 1000)
-      .verify.containsText('form > button', 'RESET PASSWORD')
+      .waitForElementVisible('form > div > button', 1000)
+      .verify.containsText('form > div > button', 'reset password')
       .end();
   },
   "Login view correct" : function (client) {
@@ -41,10 +37,8 @@ module.exports = {
       .url("http://127.0.0.1:3000/login")
       .waitForElementVisible("body", 1000)
       .waitForElementVisible("form", 1000)
-      .waitForElementVisible('input[id="usernameInput"]', 1000)
-      .waitForElementVisible('input[id="passwordInput"]', 1000)
-      .waitForElementVisible('form > button', 1000)
-      .verify.containsText('form > button', 'SIGN IN')
+      .waitForElementVisible('form > div > button', 1000)
+      .verify.containsText('form > div > button', 'Sign In')
       .end();
   },
   "Register view correct" : function (client) {
@@ -52,11 +46,8 @@ module.exports = {
       .url("http://127.0.0.1:3000/register")
       .waitForElementVisible("body", 1000)
       .waitForElementVisible("form", 1000)
-      .waitForElementVisible('input[type="text"]', 1000)
-      .waitForElementVisible('input[type="email"]', 1000)
-      .waitForElementVisible('input[type="password"]', 1000)
-      .waitForElementVisible('form > button', 1000)
-      .verify.containsText('form > button', 'CREATE ACCOUNT')
+      .waitForElementVisible('form > div >button', 1000)
+      .verify.containsText('form > div > button', 'Create account')
       .end();
   },
   "Reset Password view correct" : function (client) {
@@ -64,9 +55,8 @@ module.exports = {
       .url("http://127.0.0.1:3000/resetpw/1")
       .waitForElementVisible("body", 1000)
       .waitForElementVisible("form", 1000)
-      .waitForElementVisible('input[type="password"]', 1000)
-      .waitForElementVisible('form > button', 1000)
-      .verify.containsText('form > button', 'RESET PASSWORD')
+      .waitForElementVisible('form > div > button', 1000)
+      .verify.containsText('form > div > button', 'Reset password')
       .end();
   },
 };

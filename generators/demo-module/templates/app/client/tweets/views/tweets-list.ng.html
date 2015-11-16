@@ -1,36 +1,40 @@
-<md-content class="topSpace" layout="row">
-  <span flex></span>
-    <div layout="column" flex="50">
-      <div layout="column">
-        <md-input-container>
-          <label>Search</label>
-          <input type="text" ng-model="search"/>
-        </md-input-container>
-      </div>
-      <form layout="row" ng-show="$root.currentUser">
-        <md-button class="md-fab" aria-label="add new tweet" ng-click="add(newTweet)">
-          <md-icon md-font-set="material-icons"> add </md-icon>
-        </md-button>
-        <md-input-container flex>
-          <label>New Tweet</label>
-          <input type="text" ng-model="newTweet.message"/>
-        </md-input-container>
-        <div flex="10">
-          <md-checkbox ng-model="newTweet.public" aria-label="Checkbox">
-            Public
-          </md-checkbox>
+<section id="core" class="topSpace">
+    <div class="container">
+        <header>
+            <h1>
+                <p>Tweets</p>
+            </h1>
+        </header>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                  <div class="input-group">
+                    <span class="input-group-addon">search</span>
+                    <input type="text" ng-model="search" class="form-control" placeholder="filter">
+                  </div>
+                </p>
+            </div>
         </div>
-      </form>
 
-      <md-content class="md-padding">
-        <div ng-repeat="tweet in tweets">
-          <md-card>
-            <md-card-content>
-              <p class="ma-message">{{tweet.message}}</p>
-            </md-card-content>
-          </md-card>
+        <div class='row'>
+          <div class='col-md-12'>
+            <form ng-show="$root.currentUser">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="new tweet" ng-model="newTweet.message">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" aria-label="add new tweet" ng-click="add(newTweet)">Add</button>
+                </span>
+              </div><!-- /input-group -->
+            </form>
+          </div>
         </div>
-      </md-content>
+
+        <div class='row topSpace'>
+          <div class='col-md-12'>
+            <ul class="list-group" ng-repeat="tweet in tweets">
+              <li class="list-group-item"><span class="ma-message">{{tweet.message}}</span></li>
+            </ul>
+          </div>
+        </div>
     </div>
-  <span flex></span>
-</md-content>
+</section>

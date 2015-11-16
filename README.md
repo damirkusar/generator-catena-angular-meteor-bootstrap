@@ -2,7 +2,7 @@
 
 Catena is a chain of craters.
 
-`Meteor, AngularJS, Angular-UI, Angular-Material, User handling, Velocity, Jasmine & NightWatch out of the box.`
+`Meteor, AngularJS, Angular-UI, Bootstrap, User handling, Velocity, Jasmine & NightWatch out of the box.`
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ npm install -g starrynight
 To get started, just install the catena generator & run it.
 
 ```bash
-npm install -g generator-catena-angular-meteor-material
+npm install -g generator-catena-angular-meteor-bootstrap
 ```
 
 ### Create new project with the Catena Generator
@@ -53,7 +53,7 @@ cd myNewProject
 then run the generator and follow the questions.
 
 ```bash
-yo catena-angular-meteor-material
+yo catena-angular-meteor-bootstrap
 ```
 
 ### Run the Application
@@ -84,13 +84,13 @@ You can do that by a single word or if you have more words add it between ""
 This module creates the angular module, a default collection, server code and tests skeletons.
 
 ```bash
-yo catena-angular-meteor-material:module newModule
+yo catena-angular-meteor-bootstrap:module newModule
 ```
 
 or
 
 ```bash
-yo catena-angular-meteor-material:module "new Module"
+yo catena-angular-meteor-bootstrap:module "new Module"
 ```
 
 ### Create Angular Module (Client)
@@ -98,13 +98,13 @@ yo catena-angular-meteor-material:module "new Module"
 This module creates the angular module and tests skeletons for client and nightWatch.
 
 ```bash
-yo catena-angular-meteor-material:angular-module newModule
+yo catena-angular-meteor-bootstrap:angular-module newModule
 ```
 
 or
 
 ```bash
-yo catena-angular-meteor-material:angular-module "new Module"
+yo catena-angular-meteor-bootstrap:angular-module "new Module"
 ```
 
 ## Testing
