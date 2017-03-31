@@ -2,7 +2,7 @@
 
 ## Catena - the yeoman-generator for fullstack AngularJS & Meteor apps
 
-Catena is a chain of craters.
+Catena is a chain of craters. 
 
 `Meteor, AngularJS, Angular-UI, Bootstrap, User handling, Velocity, Jasmine & NightWatch out of the box.`
 
